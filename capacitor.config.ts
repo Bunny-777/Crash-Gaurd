@@ -1,12 +1,11 @@
 import { CapacitorConfig } from '@capacitor/core';
 
 const config: CapacitorConfig = {
-  appId: 'app.lovable.4e02027d25f647a8acad4a88e2afcf7a',
-  appName: 'motion-alert-buddy',
+  appId: 'app.lovable.crashguard',
+  appName: 'CrashGuard',
   webDir: 'dist',
   server: {
-    url: 'https://4e02027d-25f6-47a8-acad-4a88e2afcf7a.lovableproject.com?forceHideBadge=true',
-    cleartext: true
+    androidScheme: 'https'
   },
   plugins: {
     Geolocation: {
@@ -14,7 +13,8 @@ const config: CapacitorConfig = {
     },
     Device: {
       permissions: ["notifications"]
-    }
+    },
+    Haptics: {}
   }
 };
 
