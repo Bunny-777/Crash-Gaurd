@@ -8,89 +8,104 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* CrashGuard Design System - Safety & Emergency Theme */
+    --background: 248 250 252;
+    --foreground: 15 23 42;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Safety Blue Primary */
+    --primary: 214 88% 27%;
+    --primary-foreground: 248 250 252;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Emergency Red for alerts */
+    --emergency: 0 84% 45%;
+    --emergency-foreground: 248 250 252;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Success Green for safe status */
+    --success: 142 76% 36%;
+    --success-foreground: 248 250 252;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warning Orange */
+    --warning: 38 92% 50%;
+    --warning-foreground: 15 23 42;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --secondary: 226 71% 40%;
+    --secondary-foreground: 248 250 252;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --muted: 226 50% 94%;
+    --muted-foreground: 100 12% 45%;
 
-    --radius: 0.5rem;
+    --accent: 214 95% 93%;
+    --accent-foreground: 214 88% 27%;
 
-    --sidebar-background: 0 0% 98%;
+    --destructive: 0 84% 45%;
+    --destructive-foreground: 248 250 252;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --border: 214 31% 91%;
+    --input: 214 31% 91%;
+    --ring: 214 88% 27%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --radius: 0.75rem;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* CrashGuard specific tokens */
+    --gradient-emergency: linear-gradient(135deg, hsl(0 84% 45%), hsl(0 72% 51%));
+    --gradient-safety: linear-gradient(135deg, hsl(214 88% 27%), hsl(226 71% 40%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(160 84% 39%));
+    
+    --shadow-emergency: 0 10px 30px -10px hsl(0 84% 45% / 0.3);
+    --shadow-safety: 0 10px 30px -10px hsl(214 88% 27% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(214 31% 91% / 0.5);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 15 23 42;
+    --foreground: 248 250 252;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 214 88% 27%;
+    --primary-foreground: 248 250 252;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --emergency: 0 84% 45%;
+    --emergency-foreground: 248 250 252;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --success: 142 76% 36%;
+    --success-foreground: 248 250 252;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 15 23 42;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --secondary: 226 71% 40%;
+    --secondary-foreground: 248 250 252;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --muted: 51 65% 24%;
+    --muted-foreground: 203 23% 65%;
+
+    --accent: 51 65% 24%;
+    --accent-foreground: 248 250 252;
+
+    --destructive: 0 84% 45%;
+    --destructive-foreground: 248 250 252;
+
+    --border: 51 65% 24%;
+    --input: 51 65% 24%;
+    --ring: 214 88% 27%;
+
+    --shadow-emergency: 0 10px 30px -10px hsl(0 84% 45% / 0.4);
+    --shadow-safety: 0 10px 30px -10px hsl(214 88% 27% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
   }
 }
 
@@ -101,5 +116,35 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+
+  .crashguard-gradient-emergency {
+    background: var(--gradient-emergency);
+  }
+
+  .crashguard-gradient-safety {
+    background: var(--gradient-safety);
+  }
+
+  .crashguard-gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .crashguard-pulse {
+    animation: var(--animation-pulse);
+  }
+
+  .crashguard-transition {
+    transition: var(--transition-smooth);
+  }
+
+  @keyframes emergency-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(0 84% 45% / 0.3); }
+    50% { box-shadow: 0 0 30px hsl(0 84% 45% / 0.6), 0 0 40px hsl(0 84% 45% / 0.3); }
+  }
+
+  .emergency-glow {
+    animation: emergency-glow 1.5s ease-in-out infinite;
   }
 }
