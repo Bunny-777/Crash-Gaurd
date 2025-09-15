@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App's normal (full-screen) theme -->
+    <style name="Theme.CrashDetector" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- simple colors (replace with your color resources if you have them) -->
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryDark">#3700B3</item>
+        <item name="colorAccent">#03DAC5</item>
+    </style>
+
+    <!-- Overlay dialog theme (must match manifest reference: Theme.CrashDetector.OverlayDialog) -->
+    <style name="Theme.CrashDetector.OverlayDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- Make the dialog reasonably narrow on phones -->
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+
+        <!-- Rounded white card background (provide drawable below) -->
+        <item name="android:windowBackground">@drawable/overlay_background</item>
+
+        <!-- keep it translucent so underlying app is dimly visible -->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <!-- prevent closing by tapping outside (we handle cancel explicitly) -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+
+        <!-- ensure title bar / action bar not present -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>
