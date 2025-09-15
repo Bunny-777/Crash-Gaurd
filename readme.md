@@ -1,4 +1,4 @@
-# 🚗 CrashGuard – Smart Accident Detection & Emergency Alert System
+# 🚗 CrashGuard – Smart Accident Detection & Emergency Alert System Application
 
 ## 📖 What is CrashGuard?
 
